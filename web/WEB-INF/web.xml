@@ -115,6 +115,14 @@
         <servlet-name>Checkout</servlet-name>
         <servlet-class>controller.Checkout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcelServlet</servlet-name>
+        <servlet-class>controller.ExcelServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>10485760</max-file-size>
+            <max-request-size>10485760</max-request-size>
+        </multipart-config>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ShopServlet</servlet-name>
         <url-pattern>/shop</url-pattern>
@@ -178,5 +186,9 @@
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/process</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcelServlet</servlet-name>
+        <url-pattern>/excel</url-pattern>
     </servlet-mapping>
 </web-app>
